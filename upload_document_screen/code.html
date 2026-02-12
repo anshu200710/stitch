@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Upload Document Screen - VyaaparSaathi</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "primary-dark": "#0eaac9", // A slightly darker shade for hover/active states derived from hue
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                        "neutral-surface": "#ffffff",
+                        "neutral-border": "#e1e6e8", // Derived from primary's cool tone
+                        "text-primary": "#1a2c30",   // Dark variant of the background dark
+                        "text-secondary": "#6b7c80", // Muted slate-like tone
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for clean mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Smooth dashed border animation for the upload zone */
+        @keyframes dash-pulse {
+            0% { border-color: #13c8ec; }
+            50% { border-color: #8bebfd; }
+            100% { border-color: #13c8ec; }
+        }
+        
+        .upload-zone-active {
+            animation: dash-pulse 2s infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex justify-center text-text-primary">
+<!-- Mobile Device Container -->
+<div class="w-full max-w-md bg-white dark:bg-[#15272b] min-h-screen shadow-xl relative flex flex-col overflow-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 pt-12 pb-4 bg-white dark:bg-[#15272b] z-10">
+<button class="p-2 -ml-2 rounded-full hover:bg-background-light dark:hover:bg-background-dark text-text-primary dark:text-white transition-colors">
+<span class="material-icons-round text-2xl">chevron_left</span>
+</button>
+<h1 class="text-lg font-bold text-text-primary dark:text-white">Upload Document</h1>
+<button class="p-2 -mr-2 rounded-full hover:bg-background-light dark:hover:bg-background-dark text-text-primary dark:text-white transition-colors">
+<span class="material-icons-round text-2xl">more_horiz</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto no-scrollbar px-6 pb-24">
+<!-- Context Section -->
+<div class="mt-2 mb-6">
+<h2 class="text-2xl font-bold text-text-primary dark:text-white mb-1">Add Business Proof</h2>
+<p class="text-sm text-text-secondary dark:text-gray-400">Ensure all details are clearly visible.</p>
+</div>
+<!-- Upload Zone -->
+<div class="group relative w-full aspect-[4/3] rounded-2xl border-2 border-dashed border-primary/40 hover:border-primary bg-primary/5 dark:bg-primary/10 transition-all duration-300 flex flex-col items-center justify-center text-center p-6 mb-8 cursor-pointer active:scale-[0.99]">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+<span class="material-icons-round text-3xl text-primary">cloud_upload</span>
+</div>
+<h3 class="text-base font-semibold text-text-primary dark:text-white mb-2">Drag &amp; drop or tap to upload</h3>
+<p class="text-xs text-text-secondary dark:text-gray-400 max-w-[200px] leading-relaxed">
+                    Supported formats: PDF, JPG, PNG <br/>(Max size: 5MB)
+                </p>
+<!-- Hidden Input Mockup -->
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file"/>
+</div>
+<!-- Recent Activity Section -->
+<div class="mb-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold text-text-primary dark:text-white">Recent Activity</h3>
+<button class="text-xs font-semibold text-primary hover:text-primary-dark">Clear All</button>
+</div>
+<div class="space-y-4">
+<!-- Item 1: Uploading State -->
+<div class="bg-background-light dark:bg-[#1d3237] p-4 rounded-xl border border-neutral-border dark:border-white/5 relative overflow-hidden group">
+<div class="flex items-start gap-4 mb-3">
+<!-- Icon/Thumbnail Placeholder -->
+<div class="w-10 h-10 rounded-lg bg-white dark:bg-white/10 flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-icons-round text-primary">picture_as_pdf</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-semibold text-text-primary dark:text-white truncate">GST_Registration_Certificate.pdf</h4>
+<span class="text-xs font-medium text-text-secondary dark:text-gray-400">1.2 MB</span>
+</div>
+<p class="text-xs text-primary mt-0.5">Uploading...</p>
+</div>
+<button class="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-white/10 text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-icons-round text-lg">close</span>
+</button>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[45%] relative overflow-hidden">
+<div class="absolute inset-0 bg-white/30 animate-[shimmer_2s_infinite]"></div>
+</div>
+</div>
+</div>
+<!-- Item 2: Completed State (Image) -->
+<div class="bg-white dark:bg-[#1d3237] p-3 rounded-xl border border-neutral-border dark:border-white/5 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+<!-- Thumbnail Image -->
+<div class="w-12 h-12 rounded-lg bg-gray-100 overflow-hidden shrink-0 relative">
+<img alt="Document thumbnail showing abstract paperwork pattern" class="w-full h-full object-cover" data-alt="Abstract blurry document paper thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdOOD0UZZMtDJpW6cLDj4qxC8xTc8Kx30HIx78V2ly6FkPXhaT4mBejXRfQqczkuPIoH-RxOWewA_WDnrbsxixXZ-pJHOvKEQlQ5eRTSjLlM0X1j01h9pRbryRe7556el1O4rdgQGL6g1BYhsZ8T8FheA-igAtZ3zs0byz9uIBIBbsaij5fD4numcMVreNP4U7xerKofH5JC0YOcSPmhiX0RucbZPj98mmSJb1B_nJz9BY5aQf0j66eWdjztvdy8XUWNW6ihpC1aI"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-text-primary dark:text-white truncate">Shop_License_Front.jpg</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-text-secondary dark:text-gray-400">2.4 MB</span>
+<span class="w-1 h-1 rounded-full bg-gray-300"></span>
+<span class="text-xs text-green-500 flex items-center gap-0.5 font-medium">
+<span class="material-icons-round text-[14px]">check_circle</span>
+                                    Completed
+                                </span>
+</div>
+</div>
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-white/10 text-text-secondary dark:text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-icons-round text-xl">delete_outline</span>
+</button>
+</div>
+<!-- Item 3: Completed State (PDF) -->
+<div class="bg-white dark:bg-[#1d3237] p-3 rounded-xl border border-neutral-border dark:border-white/5 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+<!-- PDF Icon -->
+<div class="w-12 h-12 rounded-lg bg-red-50 dark:bg-red-900/20 flex items-center justify-center shrink-0">
+<span class="material-icons-round text-red-500 text-2xl">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-text-primary dark:text-white truncate">Udyam_Registration.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-text-secondary dark:text-gray-400">840 KB</span>
+<span class="w-1 h-1 rounded-full bg-gray-300"></span>
+<span class="text-xs text-green-500 flex items-center gap-0.5 font-medium">
+<span class="material-icons-round text-[14px]">check_circle</span>
+                                    Completed
+                                </span>
+</div>
+</div>
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-white/10 text-text-secondary dark:text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-icons-round text-xl">delete_outline</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Action Bar -->
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-white dark:bg-[#15272b] border-t border-neutral-border dark:border-white/5 z-20">
+<!-- Shadow gradient above bar for depth -->
+<div class="absolute -top-12 left-0 right-0 h-12 bg-gradient-to-t from-white dark:from-[#15272b] to-transparent pointer-events-none"></div>
+<button class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Confirm Upload</span>
+<span class="material-icons-round text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

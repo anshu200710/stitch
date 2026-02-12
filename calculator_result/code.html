@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GST Calculator Result - VyaaparSaathi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                "success": "#16a34a", // Adding a specific success green for the total amount
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+              boxShadow: {
+                'soft': '0 4px 20px -2px rgba(19, 127, 236, 0.08)',
+                'card': '0 2px 12px -2px rgba(0, 0, 0, 0.05)',
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* iOS Safe Area handling */
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .pt-safe {
+            padding-top: env(safe-area-inset-top);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+<!-- Top Status Bar Area (Visual Only) -->
+<div class="h-12 w-full bg-background-light dark:bg-background-dark sticky top-0 z-50 pt-safe"></div>
+<!-- Header -->
+<header class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark sticky top-12 z-40">
+<button class="p-2 rounded-full hover:bg-primary/10 text-slate-600 dark:text-slate-300 transition-colors">
+<span class="material-icons">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">GST Result</h1>
+<button class="p-2 rounded-full hover:bg-primary/10 text-primary font-medium text-sm">
+            History
+        </button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-4 py-6 space-y-6 overflow-y-auto no-scrollbar pb-32">
+<!-- Hero Card: Total Amount -->
+<section class="w-full">
+<div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-soft border border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center relative overflow-hidden">
+<!-- Abstract decorative background element -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
+<div class="absolute bottom-0 left-0 w-24 h-24 bg-success/5 rounded-full -ml-8 -mb-8 blur-xl"></div>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider mb-2 z-10">Total Amount</span>
+<h2 class="text-4xl font-extrabold text-success dark:text-green-400 tracking-tight z-10">
+                    ₹ 1,180.00
+                </h2>
+<div class="mt-4 inline-flex items-center px-3 py-1 bg-success/10 text-success dark:text-green-400 text-xs font-semibold rounded-full z-10">
+<span class="material-icons text-sm mr-1">check_circle</span>
+                    Calculation Successful
+                </div>
+</div>
+</section>
+<!-- Breakdown Card -->
+<section class="space-y-3">
+<h3 class="text-slate-900 dark:text-white font-semibold text-lg px-1">Breakdown</h3>
+<div class="bg-white dark:bg-slate-800 rounded-xl shadow-card border border-slate-100 dark:border-slate-700 overflow-hidden">
+<!-- Table Header -->
+<div class="bg-slate-50 dark:bg-slate-900/50 px-5 py-3 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Description</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Amount (₹)</span>
+</div>
+<!-- Table Content -->
+<div class="p-5 space-y-4">
+<!-- Row 1: Base Amount -->
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mr-3 text-primary">
+<span class="material-icons text-sm">attach_money</span>
+</div>
+<span class="text-slate-600 dark:text-slate-300 font-medium">Base Amount</span>
+</div>
+<span class="text-slate-900 dark:text-white font-bold">1,000.00</span>
+</div>
+<!-- Row 2: GST -->
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center mr-3 text-orange-600 dark:text-orange-400">
+<span class="material-icons text-sm">percent</span>
+</div>
+<div class="flex flex-col">
+<span class="text-slate-600 dark:text-slate-300 font-medium">GST Amount</span>
+<span class="text-xs text-slate-400 dark:text-slate-500">Rate: 18%</span>
+</div>
+</div>
+<span class="text-orange-600 dark:text-orange-400 font-bold">+ 180.00</span>
+</div>
+<!-- Row 3: Discount -->
+<div class="flex justify-between items-center opacity-60">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center mr-3 text-emerald-600 dark:text-emerald-400">
+<span class="material-icons text-sm">local_offer</span>
+</div>
+<span class="text-slate-600 dark:text-slate-300 font-medium">Discount</span>
+</div>
+<span class="text-emerald-600 dark:text-emerald-400 font-bold">- 0.00</span>
+</div>
+</div>
+<!-- Footer Summary inside card -->
+<div class="bg-primary/5 dark:bg-primary/10 px-5 py-4 border-t border-primary/10 dark:border-primary/20 flex justify-between items-center">
+<span class="text-primary font-bold text-sm">Net Payable</span>
+<span class="text-primary font-bold text-xl">₹ 1,180.00</span>
+</div>
+</div>
+</section>
+<!-- Additional Info / Context -->
+<section class="px-1">
+<div class="flex items-start p-3 bg-blue-50 dark:bg-slate-800/80 border border-blue-100 dark:border-slate-700 rounded-lg">
+<span class="material-icons text-primary text-sm mt-0.5 mr-2">info</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                    This calculation is based on the 'Intra-State' supply type. CGST (9%) and SGST (9%) are applied equally.
+                </p>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar (Fixed) -->
+<div class="fixed bottom-0 left-0 w-full bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 px-4 py-4 pb-safe z-50 shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.05)]">
+<div class="flex gap-3 max-w-md mx-auto">
+<!-- Secondary Action -->
+<button class="flex-1 py-3.5 px-4 rounded-xl border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors flex items-center justify-center gap-2 group">
+<span class="material-icons text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors text-xl">refresh</span>
+                Recalculate
+            </button>
+<!-- Primary Action -->
+<button class="flex-1 py-3.5 px-4 rounded-xl bg-primary hover:bg-blue-600 text-white font-semibold shadow-lg shadow-primary/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-icons text-xl">share</span>
+                Save / Share
+            </button>
+</div>
+</div>
+</body></html>

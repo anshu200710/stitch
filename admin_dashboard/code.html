@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VyaaparSaathi Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-dark": "#0e62b8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 antialiased h-screen overflow-hidden flex flex-col selection:bg-primary selection:text-white">
+<!-- Header Section -->
+<header class="bg-white dark:bg-[#15202b] px-5 pt-12 pb-4 shadow-sm z-20 flex justify-between items-center sticky top-0">
+<div class="flex items-center gap-3">
+<button class="p-2 -ml-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+<span class="material-icons text-2xl">menu</span>
+</button>
+<div>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white leading-none">VyaaparSaathi</h1>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">Admin Dashboard</p>
+</div>
+</div>
+<button class="relative p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+<span class="material-icons">notifications</span>
+<span class="absolute top-2 right-2 h-2.5 w-2.5 rounded-full bg-red-500 border-2 border-white dark:border-[#15202b]"></span>
+</button>
+</header>
+<!-- Main Scrollable Content -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-24">
+<!-- Welcome Banner -->
+<div class="px-5 mt-6 mb-2">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Welcome back,</p>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Admin Team</h2>
+</div>
+<div class="text-right">
+<span class="text-xs font-medium px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-lg">System Online</span>
+</div>
+</div>
+</div>
+<!-- KPI Carousel -->
+<div class="mt-6 pl-5 overflow-x-auto no-scrollbar pb-4 flex gap-4 pr-5 snap-x">
+<!-- Card 1: Total Users -->
+<div class="snap-start shrink-0 w-72 bg-white dark:bg-[#15202b] p-5 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-icons text-8xl text-primary">people</span>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons text-xl">group</span>
+</div>
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Total Users</span>
+</div>
+<div class="flex items-end gap-3 mb-2">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">1,240</span>
+<span class="flex items-center text-xs font-bold text-green-600 bg-green-50 dark:bg-green-900/20 px-1.5 py-0.5 rounded mb-1.5">
+<span class="material-icons text-[14px] mr-0.5">trending_up</span> 12%
+                    </span>
+</div>
+<p class="text-xs text-slate-400">vs. last week</p>
+<!-- Mini Chart Visual -->
+<div class="h-1 w-full bg-slate-100 dark:bg-slate-700 mt-4 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 rounded-full"></div>
+</div>
+</div>
+<!-- Card 2: Active Requests -->
+<div class="snap-start shrink-0 w-72 bg-white dark:bg-[#15202b] p-5 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-icons text-8xl text-orange-500">pending_actions</span>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-10 w-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-600 dark:text-orange-400">
+<span class="material-icons text-xl">assignment</span>
+</div>
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Active Requests</span>
+</div>
+<div class="flex items-end gap-3 mb-2">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">45</span>
+<span class="flex items-center text-xs font-bold text-orange-600 bg-orange-50 dark:bg-orange-900/20 px-1.5 py-0.5 rounded mb-1.5">
+                        5 Urgent
+                    </span>
+</div>
+<p class="text-xs text-slate-400">Pending approval</p>
+<div class="h-1 w-full bg-slate-100 dark:bg-slate-700 mt-4 rounded-full overflow-hidden">
+<div class="h-full bg-orange-500 w-1/3 rounded-full"></div>
+</div>
+</div>
+<!-- Card 3: Revenue -->
+<div class="snap-start shrink-0 w-72 bg-white dark:bg-[#15202b] p-5 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-icons text-8xl text-green-600">payments</span>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-10 w-10 rounded-full bg-green-600/10 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-icons text-xl">currency_rupee</span>
+</div>
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Revenue</span>
+</div>
+<div class="flex items-end gap-3 mb-2">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">₹4.5L</span>
+<span class="flex items-center text-xs font-bold text-green-600 bg-green-50 dark:bg-green-900/20 px-1.5 py-0.5 rounded mb-1.5">
+<span class="material-icons text-[14px] mr-0.5">trending_up</span> 8%
+                    </span>
+</div>
+<p class="text-xs text-slate-400">Monthly recurring</p>
+<div class="h-1 w-full bg-slate-100 dark:bg-slate-700 mt-4 rounded-full overflow-hidden">
+<div class="h-full bg-green-500 w-full rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="px-5 mt-8">
+<h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Quick Actions</h3>
+<div class="grid grid-cols-4 gap-4">
+<button class="flex flex-col items-center gap-2 group">
+<div class="h-14 w-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 group-active:scale-95 transition-transform">
+<span class="material-icons">person_add</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300 text-center leading-tight">Add User</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="h-14 w-14 rounded-full bg-white dark:bg-[#15202b] text-primary border border-slate-100 dark:border-slate-700 flex items-center justify-center shadow-sm group-active:scale-95 transition-transform">
+<span class="material-icons">verified</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300 text-center leading-tight">Approve</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="h-14 w-14 rounded-full bg-white dark:bg-[#15202b] text-primary border border-slate-100 dark:border-slate-700 flex items-center justify-center shadow-sm group-active:scale-95 transition-transform">
+<span class="material-icons">description</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300 text-center leading-tight">Reports</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="h-14 w-14 rounded-full bg-white dark:bg-[#15202b] text-primary border border-slate-100 dark:border-slate-700 flex items-center justify-center shadow-sm group-active:scale-95 transition-transform">
+<span class="material-icons">settings</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300 text-center leading-tight">Settings</span>
+</button>
+</div>
+</div>
+<!-- Recent Activity List -->
+<div class="mt-8 px-5">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Recent Activity</h3>
+<button class="text-sm font-semibold text-primary hover:text-primary-dark">View All</button>
+</div>
+<div class="bg-white dark:bg-[#15202b] rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Item 1 -->
+<div class="p-4 flex gap-4 items-start">
+<div class="shrink-0 h-10 w-10 rounded-full overflow-hidden border border-slate-100 dark:border-slate-700">
+<img alt="Portrait of a business man in a suit" class="h-full w-full object-cover" data-alt="Portrait of a business man in a suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW-jEWfiamT-w_C0saE-UxSmXve88n1xB1gidt4Hvp0Acevuz4iXChP5YhmTiYX5Q8sqpIYP_sKNksFGjs0hJ57MrtPaeR-XBxCoHnN39U97zO77SegJmBkDz7EIpI-_73UBRN2SoD4i3MoFi2kVPYvxCpwoR94dgeIHKNe35IwtYQEIkBbFTPpHj9UuBPZknHPZEeOCMoeey-2zInTcpfm-ZursWaio1cl_iAVa_huXk1kGjkASPv1d8YevCsmMF5QeuwI62Lxm8"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-slate-900 dark:text-white truncate">New Vendor: Sharma Electronics</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Registration pending approval</p>
+</div>
+<div class="text-right shrink-0">
+<span class="text-xs text-slate-400 font-medium block">10:30 AM</span>
+<span class="inline-block h-2 w-2 rounded-full bg-orange-500 mt-1"></span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-4 flex gap-4 items-start">
+<div class="shrink-0 h-10 w-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-icons text-sm">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-slate-900 dark:text-white truncate">Service Request #402 Approved</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Processed by Admin Panel</p>
+</div>
+<div class="text-right shrink-0">
+<span class="text-xs text-slate-400 font-medium block">09:45 AM</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-4 flex gap-4 items-start">
+<div class="shrink-0 h-10 w-10 rounded-full overflow-hidden border border-slate-100 dark:border-slate-700">
+<img alt="Portrait of a business woman smiling" class="h-full w-full object-cover" data-alt="Portrait of a business woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeXm84vy8AlqxxiwnQhJypq3IOLKMIEbxwNCexgbujx4aPFdyA6WaoTA7M0Hm8EffyipANhG9LiwwE5jN7QJ9G2Kk_jlN_SrRzyMVSoWzTU_e2KjBnAbFiBvxUN7onFdcRXDQBnmt5fBJ214-Rc6oZ74w3beASb_1KuPV2m-smg_tE9nBPxH-qfVYN4H4jQtL7PnXDQ-bU1JGyFVqvE455vQfpf9FQ3QojEps-2gab7WvTq32X4pjRyskRT6eAdrKXz0sFkEVhPG4"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-slate-900 dark:text-white truncate">Subscription Renewal</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Gupta Textiles - Premium Plan</p>
+</div>
+<div class="text-right shrink-0">
+<span class="text-xs text-slate-400 font-medium block">Yesterday</span>
+<span class="inline-block h-2 w-2 rounded-full bg-primary mt-1"></span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-4 flex gap-4 items-start">
+<div class="shrink-0 h-10 w-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400">
+<span class="material-icons text-sm">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-slate-900 dark:text-white truncate">Payment Failed</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Mehta Stores - ₹2,500</p>
+</div>
+<div class="text-right shrink-0">
+<span class="text-xs text-slate-400 font-medium block">2 days ago</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="bg-white dark:bg-[#15202b] border-t border-slate-200 dark:border-slate-800 pb-safe pt-2 px-6 flex justify-between items-center z-20 sticky bottom-0">
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-icons">dashboard</span>
+<span class="text-[10px] font-semibold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<span class="material-icons">group</span>
+<span class="text-[10px] font-medium">Users</span>
+</a>
+<div class="relative -top-6">
+<button class="h-14 w-14 rounded-full bg-primary text-white shadow-lg shadow-primary/40 flex items-center justify-center transform transition-transform active:scale-95 border-4 border-background-light dark:border-background-dark">
+<span class="material-icons text-2xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<span class="material-icons">assignment</span>
+<span class="text-[10px] font-medium">Requests</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<span class="material-icons">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</a>
+</nav>
+<!-- Drawer Menu Overlay (Hidden by default, visual representation for design completeness) -->
+<!-- Ideally toggled via JS, keeping hidden for static output or can be shown if requested -->
+<!-- 
+    <div class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+    <div class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-[#15202b] z-50 transform -translate-x-full transition-transform">
+        ... Drawer Content ...
+    </div> 
+    -->
+</body></html>

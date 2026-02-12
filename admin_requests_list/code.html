@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Requests List - VyaaparSaathi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100 min-h-screen flex justify-center">
+<!-- Mobile Container -->
+<div class="w-full max-w-md bg-white dark:bg-[#15202b] shadow-xl min-h-screen relative flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-20 bg-white/90 dark:bg-[#15202b]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 px-4 py-3 flex items-center justify-between">
+<button class="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300">
+<span class="material-icons-round text-2xl">menu</span>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Requests</h1>
+<div class="flex gap-2">
+<button class="p-2 -mr-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300 relative">
+<span class="material-icons-round text-2xl">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-white dark:border-[#15202b]"></span>
+</button>
+</div>
+</header>
+<!-- Horizontal Filter Tabs -->
+<div class="bg-white dark:bg-[#15202b] sticky top-[60px] z-10 py-3 shadow-sm border-b border-gray-100 dark:border-gray-800">
+<div class="flex overflow-x-auto no-scrollbar px-4 gap-3">
+<!-- Active Tab -->
+<button class="flex-shrink-0 bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md shadow-primary/30 transition-all">
+                    Pending
+                    <span class="ml-1.5 bg-white/20 px-1.5 py-0.5 rounded-full text-xs">12</span>
+</button>
+<!-- Inactive Tabs -->
+<button class="flex-shrink-0 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    In-Review
+                    <span class="ml-1.5 bg-gray-200 dark:bg-gray-700 px-1.5 py-0.5 rounded-full text-xs text-gray-500 dark:text-gray-300">5</span>
+</button>
+<button class="flex-shrink-0 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    Completed
+                </button>
+<button class="flex-shrink-0 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    Rejected
+                </button>
+</div>
+</div>
+<!-- Request List Content -->
+<main class="flex-1 p-4 bg-background-light dark:bg-background-dark">
+<!-- List Header/Stats -->
+<div class="flex justify-between items-end mb-4 px-1">
+<p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Showing 12 pending requests</p>
+<button class="text-primary text-sm font-semibold flex items-center">
+                    Filter <span class="material-icons-round text-base ml-1">filter_list</span>
+</button>
+</div>
+<!-- Card List -->
+<div class="flex flex-col gap-3">
+<!-- Card Item 1 -->
+<div class="bg-white dark:bg-[#1e2936] rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-transform cursor-pointer">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 flex items-center justify-center text-primary font-bold text-lg">
+                                RS
+                            </div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white leading-tight">Rahul Sharma</h3>
+<span class="text-xs text-gray-400 dark:text-gray-500">ID: #REQ-2023-891</span>
+</div>
+</div>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">Oct 24, 10:30 AM</span>
+</div>
+<div class="mb-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Private Limited Company Registration</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Requires immediate attention for document verification.</p>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-gray-50 dark:border-gray-700">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                            Pending Action
+                        </span>
+<span class="material-icons-round text-gray-300 dark:text-gray-600 text-xl">chevron_right</span>
+</div>
+</div>
+<!-- Card Item 2 -->
+<div class="bg-white dark:bg-[#1e2936] rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-transform cursor-pointer">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<img alt="User Avatar" class="h-10 w-10 rounded-full object-cover border border-gray-100 dark:border-gray-700" data-alt="Profile photo of Anita Desai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqghgCa9dV98WBZRPA1iq8-gS0AK5hV1oXU1eu8a-vxxPFFmZb05GKmTGhamrV8gH1faHjCo1tQz4IJJG18o_SSWT8GU5Ok5xg_GG3YrOGhGyvpvgruTfmN_bwsn5IrMDFGWKju1gCZYyk6mFwfkWkjEgQl0Ys--rEo7r3zIGr5qKRXmygqd2SFHseEXWo0LXKL-0RDOyj_ltx8yVDcCG0GbfW9rMrps7eL-exvhTFU6KrZpYqNbEvEs0U5F_uQiwWkyqSELs7CPs"/>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white leading-tight">Anita Desai</h3>
+<span class="text-xs text-gray-400 dark:text-gray-500">ID: #REQ-2023-884</span>
+</div>
+</div>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">Oct 23, 4:15 PM</span>
+</div>
+<div class="mb-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">GST Registration - New Business</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Documents uploaded, waiting for initial check.</p>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-gray-50 dark:border-gray-700">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                            Pending Review
+                        </span>
+<span class="material-icons-round text-gray-300 dark:text-gray-600 text-xl">chevron_right</span>
+</div>
+</div>
+<!-- Card Item 3 (High Priority) -->
+<div class="bg-white dark:bg-[#1e2936] rounded-xl p-4 shadow-sm border-l-4 border-l-red-500 border-y border-r border-gray-100 dark:border-y-gray-800 dark:border-r-gray-800 active:scale-[0.99] transition-transform cursor-pointer relative overflow-hidden">
+<!-- Subtle background tint for urgent items -->
+<div class="absolute inset-0 bg-red-50 dark:bg-red-900/10 pointer-events-none"></div>
+<div class="flex justify-between items-start mb-3 relative z-10">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 flex items-center justify-center text-purple-600 dark:text-purple-300 font-bold text-lg">
+                                VK
+                            </div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white leading-tight">Vikram Khanna</h3>
+<span class="text-xs text-gray-400 dark:text-gray-500">ID: #REQ-2023-870</span>
+</div>
+</div>
+<span class="text-xs font-medium text-red-500 dark:text-red-400 font-semibold">Oct 22, 09:00 AM</span>
+</div>
+<div class="mb-4 relative z-10">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Trademark Filing Class 35</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Urgent: Client requested expedited processing.</p>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-gray-200/50 dark:border-gray-700/50 relative z-10">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500 mr-1.5 animate-pulse"></span>
+                            Urgent Pending
+                        </span>
+<span class="material-icons-round text-gray-300 dark:text-gray-600 text-xl">chevron_right</span>
+</div>
+</div>
+<!-- Card Item 4 -->
+<div class="bg-white dark:bg-[#1e2936] rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-transform cursor-pointer opacity-80 hover:opacity-100">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<img alt="User Avatar" class="h-10 w-10 rounded-full object-cover border border-gray-100 dark:border-gray-700" data-alt="Portrait of Sameer Khan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaEnPw6-Ll5pEmjt57SI5efteTvI5G2UeKo0IV7LF37eWd90mwy6d_1S1dQSAdQHZ2jEN91ASdsDKpFzNxzxhogn2qc6ubmZl81U4_4rGMHWW2HE3xCqxUJe5wFuFKyhKUx9Si_QPtvzX3LsRyrAErT7xH-y6uvyMYjwH7NRytqvg2prtipdgZsUHe3UoE19Cw5v7eRD9pY96Eu8KofpsbewmNraTEW4IhUnYJXBTJ0OelOipmLKCao9VctgNd37JW9SNucBRRWO4"/>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white leading-tight">Sameer Khan</h3>
+<span class="text-xs text-gray-400 dark:text-gray-500">ID: #REQ-2023-865</span>
+</div>
+</div>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">Oct 21, 2:45 PM</span>
+</div>
+<div class="mb-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Annual Compliance Filing</p>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-gray-50 dark:border-gray-700">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                            Pending Docs
+                        </span>
+<span class="material-icons-round text-gray-300 dark:text-gray-600 text-xl">chevron_right</span>
+</div>
+</div>
+<!-- Card Item 5 -->
+<div class="bg-white dark:bg-[#1e2936] rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-transform cursor-pointer">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800 flex items-center justify-center text-green-700 dark:text-green-300 font-bold text-lg">
+                                ME
+                            </div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white leading-tight">Meera Enterprises</h3>
+<span class="text-xs text-gray-400 dark:text-gray-500">ID: #REQ-2023-850</span>
+</div>
+</div>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">Oct 20, 11:20 AM</span>
+</div>
+<div class="mb-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">MSME Registration</p>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Clarification needed on Udyam number.</p>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-gray-50 dark:border-gray-700">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                            Pending Clarification
+                        </span>
+<span class="material-icons-round text-gray-300 dark:text-gray-600 text-xl">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Bottom Spacer for FAB -->
+<div class="h-20"></div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-6 right-6 md:absolute md:bottom-8 md:right-8 w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-30">
+<span class="material-icons-round text-2xl">add</span>
+</button>
+</div>
+</body></html>

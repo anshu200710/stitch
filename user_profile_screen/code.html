@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VyaaparSaathi - User Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "primary-dark": "#0ea5c3",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#162a2d",
+                        "border-light": "#e2e8f0",
+                        "border-dark": "#1f3a3f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100 min-h-screen antialiased flex flex-col items-center justify-center">
+<!-- Mobile Container mimicking iOS Phone -->
+<div class="w-full max-w-md h-screen md:h-[850px] bg-background-light dark:bg-background-dark md:border-8 md:border-gray-900 md:rounded-[3rem] overflow-hidden relative shadow-2xl flex flex-col">
+<!-- Status Bar Placeholder (iOS style) -->
+<div class="h-12 w-full bg-background-light dark:bg-background-dark flex items-end justify-between px-6 pb-2 z-20">
+<span class="text-sm font-semibold ml-2">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons-round text-base">signal_cellular_alt</span>
+<span class="material-icons-round text-base">wifi</span>
+<span class="material-icons-round text-lg rotate-90">battery_full</span>
+</div>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto pb-24 scrollbar-hide">
+<!-- Header / Top Bar -->
+<div class="px-6 py-4 flex justify-between items-center sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm z-10">
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">Profile</h1>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors">
+<span class="material-icons-round text-gray-500 dark:text-gray-400">notifications_none</span>
+</button>
+</div>
+<!-- User Profile Card -->
+<div class="px-6 mt-2 mb-8">
+<div class="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 shadow-sm border border-gray-100 dark:border-border-dark flex flex-col items-center text-center relative overflow-hidden">
+<!-- Decorative background accent -->
+<div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-primary/10 to-transparent"></div>
+<div class="relative mb-4">
+<div class="w-24 h-24 rounded-full p-1 bg-surface-light dark:bg-surface-dark ring-2 ring-primary/30">
+<img alt="Profile Photo" class="w-full h-full object-cover rounded-full" data-alt="Smiling man with glasses portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZgIdyFPcNpaNOvkzakE22wtn12lUpZy3AubxEH9u6uAD_QbyQvJGbvnukRRPjxhEgq0m-dj1pwLwWkJOzS3vlyZLAha1yowcLcjbnEfVQw5fS8mA7zCblyS95DsERlo8XS1p5thQ1amJlVspGy6zdZDk7OybwQpvcuz9l4fHAkVooxCLo-65qBo_MdIRq-rp0uhmvgSRJlSwkA3YaQb70h7R8m-hx5P1llP6auSLKI0xvAbVk3o9CL1GXCH4NsbQmhapEJH1kng"/>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white p-1.5 rounded-full border-2 border-surface-light dark:border-surface-dark shadow-sm">
+<span class="material-icons-round text-xs block">edit</span>
+</div>
+</div>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Rajesh Kumar</h2>
+<div class="flex items-center gap-1 mb-1">
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300">Rajesh Textiles Pvt Ltd</span>
+<span class="material-icons-round text-primary text-sm" title="Verified Business">verified</span>
+</div>
+<p class="text-xs text-gray-400 dark:text-gray-500 font-medium">rajesh.kumar@example.com</p>
+<!-- Quick Stats/Status -->
+<div class="flex items-center gap-6 mt-6 w-full justify-center">
+<div class="text-center">
+<div class="text-lg font-bold text-gray-900 dark:text-white">85%</div>
+<div class="text-[10px] uppercase tracking-wider text-gray-400 font-bold">Complete</div>
+</div>
+<div class="w-px h-8 bg-gray-200 dark:bg-border-dark"></div>
+<div class="text-center">
+<div class="text-lg font-bold text-primary">Pro</div>
+<div class="text-[10px] uppercase tracking-wider text-gray-400 font-bold">Plan</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Menu Section: Account Settings -->
+<div class="px-6 mb-6">
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-2">Account Settings</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-border-dark">
+<!-- Item 1: Edit Profile -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-icons-round text-xl">person_outline</span>
+</div>
+<div class="text-left">
+<span class="block text-sm font-semibold text-gray-900 dark:text-white">Edit Profile</span>
+<span class="block text-xs text-gray-400">Update your personal info</span>
+</div>
+</div>
+<span class="material-icons-round text-gray-300">chevron_right</span>
+</button>
+<div class="h-px bg-gray-100 dark:bg-border-dark mx-4"></div>
+<!-- Item 2: Business Details -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-icons-round text-xl">storefront</span>
+</div>
+<div class="text-left">
+<span class="block text-sm font-semibold text-gray-900 dark:text-white">Business Details</span>
+<span class="block text-xs text-gray-400">Manage documents &amp; GST</span>
+</div>
+</div>
+<span class="material-icons-round text-gray-300">chevron_right</span>
+</button>
+<div class="h-px bg-gray-100 dark:bg-border-dark mx-4"></div>
+<!-- Item 3: Settings -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-icons-round text-xl">settings</span>
+</div>
+<div class="text-left">
+<span class="block text-sm font-semibold text-gray-900 dark:text-white">Settings</span>
+<span class="block text-xs text-gray-400">App preferences &amp; security</span>
+</div>
+</div>
+<span class="material-icons-round text-gray-300">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Menu Section: Support & Logout -->
+<div class="px-6 mb-8">
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-2">Support &amp; More</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-border-dark">
+<!-- Item 4: Support -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+<span class="material-icons-round text-xl">help_outline</span>
+</div>
+<div class="text-left">
+<span class="block text-sm font-semibold text-gray-900 dark:text-white">Help &amp; Support</span>
+</div>
+</div>
+<span class="material-icons-round text-gray-300">chevron_right</span>
+</button>
+<div class="h-px bg-gray-100 dark:bg-border-dark mx-4"></div>
+<!-- Item 5: Logout -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center text-red-500 group-hover:bg-red-500 group-hover:text-white transition-colors">
+<span class="material-icons-round text-xl">logout</span>
+</div>
+<div class="text-left">
+<span class="block text-sm font-semibold text-red-500">Log Out</span>
+</div>
+</div>
+</button>
+</div>
+</div>
+<!-- Version Info -->
+<div class="text-center pb-8">
+<p class="text-[10px] text-gray-400">VyaaparSaathi v2.4.0</p>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="absolute bottom-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-border-dark px-6 pb-6 pt-2 z-30">
+<div class="flex justify-between items-center">
+<!-- Nav Item 1 -->
+<button class="flex flex-col items-center justify-center w-16 h-14 group">
+<span class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-2xl mb-1">dashboard</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">Home</span>
+</button>
+<!-- Nav Item 2 -->
+<button class="flex flex-col items-center justify-center w-16 h-14 group">
+<span class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-2xl mb-1">description</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">Docs</span>
+</button>
+<!-- Nav Item 3 (FAB Placeholder - Center) -->
+<div class="relative -top-6">
+<button class="w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center transform active:scale-95 transition-transform">
+<span class="material-icons-round text-2xl">add</span>
+</button>
+</div>
+<!-- Nav Item 4 -->
+<button class="flex flex-col items-center justify-center w-16 h-14 group">
+<span class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-2xl mb-1">analytics</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">Sales</span>
+</button>
+<!-- Nav Item 5 (Active) -->
+<button class="flex flex-col items-center justify-center w-16 h-14">
+<span class="material-icons-round text-primary text-2xl mb-1">person</span>
+<span class="text-[10px] font-bold text-primary">Profile</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

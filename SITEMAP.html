@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VyaaparSaathi - Site Map</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 font-display text-slate-800 dark:text-slate-100">
+    <div class="min-h-screen p-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-bold text-slate-900 dark:text-white mb-4">
+                    VyaaparSaathi
+                </h1>
+                <p class="text-xl text-slate-600 dark:text-slate-400">Complete Site Map & Navigation Structure</p>
+                <a href="index.html" class="inline-block mt-6 px-6 py-3 bg-primary text-white rounded-lg font-bold hover:bg-blue-600 transition">
+                    ← Back to Navigation Hub
+                </a>
+            </div>
+
+            <!-- Level 1: Home Hub -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-primary text-3xl">home</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Level 1: Entry Point</h2>
+                </div>
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow text-center">
+                        <div class="text-4xl mb-2">🏠</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2">Navigation Hub</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">index.html</p>
+                        <a href="index.html" class="text-primary text-sm font-bold hover:underline">Open →</a>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow text-center">
+                        <div class="text-4xl mb-2">📋</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2">Quick Reference</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">QUICK_REFERENCE.html</p>
+                        <a href="QUICK_REFERENCE.html" class="text-primary text-sm font-bold hover:underline">Open →</a>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow text-center">
+                        <div class="text-4xl mb-2">📖</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2">Full Guide</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">NAVIGATION_GUIDE.md</p>
+                        <a href="NAVIGATION_GUIDE.md" class="text-primary text-sm font-bold hover:underline">Open →</a>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow text-center">
+                        <div class="text-4xl mb-2">📝</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2">Read Me</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">README.md</p>
+                        <a href="README.md" class="text-primary text-sm font-bold hover:underline">Open →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 2: Auth Section -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-blue-600 text-3xl">lock</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Authentication Flow</h2>
+                </div>
+                <div class="bg-blue-50 dark:bg-slate-800 p-8 rounded-xl shadow">
+                    <div class="grid grid-cols-3 gap-8 items-center">
+                        <div class="text-center">
+                            <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow mb-4">
+                                <div class="text-4xl mb-2">⏳</div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">Splash</h3>
+                            </div>
+                            <a href="splash_screen/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl text-blue-600 mb-4">→</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Loading Screen</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow mb-4">
+                                <div class="text-4xl mb-2">🔐</div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">Login</h3>
+                            </div>
+                            <a href="login_screen/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-8 border-t-2 border-blue-300">
+                        <div class="text-center text-blue-600 text-3xl mb-4">↓</div>
+                        <div class="text-center">
+                            <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow inline-block mb-4">
+                                <div class="text-4xl mb-2">📝</div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">Sign Up</h3>
+                            </div>
+                            <a href="signup_screen/code.html" class="block text-primary font-bold text-sm mt-2">View Page →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 3: Dashboard Section -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-green-600 text-3xl">dashboard</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">User Dashboard & Profile</h2>
+                </div>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="bg-green-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">📊</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Dashboard</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Main user interface</p>
+                        <a href="user_dashboard/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-green-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">👤</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Profile</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">User settings</p>
+                        <a href="user_profile_screen/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-green-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">🔔</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Notifications</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Messages & alerts</p>
+                        <a href="user_notifications/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 4: Services Section -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-purple-600 text-3xl">design_services</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Services Management</h2>
+                </div>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="bg-purple-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">🛍️</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Browse Services</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">View available services</p>
+                        <a href="services_list/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-purple-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">🎁</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Offers</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Special promotions</p>
+                        <a href="offers_&_freebies/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-purple-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">⚙️</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Admin</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Manage services</p>
+                        <a href="admin_services_list/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 5: Requests Section -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-orange-600 text-3xl">assignment</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Requests & Orders</h2>
+                </div>
+                <div class="grid grid-cols-4 gap-6">
+                    <div class="bg-orange-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">📋</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Details</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">View request info</p>
+                        <a href="request_details/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-orange-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">✅</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Success</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Confirmation</p>
+                        <a href="request_submitted_success/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-orange-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">📊</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">All Requests</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Admin view</p>
+                        <a href="admin_requests_list/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-orange-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">🔍</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Detail View</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Admin details</p>
+                        <a href="admin_request_detail_view/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 6: Payments Section -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-red-600 text-3xl">payment</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Payment Management</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-red-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">💳</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Payment History</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">View transactions</p>
+                        <a href="payment_history/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-red-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">📈</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Admin Overview</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Payment analytics</p>
+                        <a href="admin_payments_overview/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 7: Tools Section -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-cyan-600 text-3xl">build</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Calculator Tools</h2>
+                </div>
+                <div class="bg-cyan-50 dark:bg-slate-800 p-8 rounded-xl shadow">
+                    <div class="grid grid-cols-3 gap-8 items-center">
+                        <div class="text-center">
+                            <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow mb-4">
+                                <div class="text-4xl mb-2">🧮</div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">Home</h3>
+                            </div>
+                            <a href="calculator_home/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl text-cyan-600 mb-4">→</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Select Tool</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow mb-4">
+                                <div class="text-4xl mb-2">📝</div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">GST Input</h3>
+                            </div>
+                            <a href="gst_calculator_input/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-8 border-t-2 border-cyan-300">
+                        <div class="text-center text-cyan-600 text-3xl mb-4">↓</div>
+                        <div class="text-center">
+                            <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow inline-block mb-4">
+                                <div class="text-4xl mb-2">📊</div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">Results</h3>
+                            </div>
+                            <a href="calculator_result/code.html" class="block text-primary font-bold text-sm mt-2">View Page →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 8: Documents Section -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-indigo-600 text-3xl">folder</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Document Management</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-indigo-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">📂</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">My Documents</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">View documents</p>
+                        <a href="my_documents_list/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-indigo-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">📤</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Upload</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Add documents</p>
+                        <a href="upload_document_screen/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 9: Admin Section -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-pink-600 text-3xl">admin_panel_settings</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Admin Control Panel</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-6 mb-6">
+                    <div class="bg-pink-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">🎛️</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Dashboard</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Admin overview</p>
+                        <a href="admin_dashboard/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-pink-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">👥</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Users</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Manage users</p>
+                        <a href="admin_users_list/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-pink-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">🎯</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Create Offer</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">New promotions</p>
+                        <a href="admin_create_offer/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                    <div class="bg-pink-50 dark:bg-slate-800 p-6 rounded-lg shadow">
+                        <div class="text-4xl mb-3 text-center">📢</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Notifications</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Send messages</p>
+                        <a href="admin_send_notification/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 10: Additional -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons text-slate-600 text-3xl">more_horiz</span>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Additional Pages</h2>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow">
+                    <div class="text-4xl mb-3 text-center">✏️</div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-center">Edit Service Form</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 mb-4 text-center">Service editing</p>
+                    <div class="text-center">
+                        <a href="add/edit_service_form/code.html" class="text-primary font-bold text-sm">View Page →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="bg-gradient-to-r from-primary/10 to-blue-50 dark:from-slate-800 dark:to-slate-700 p-8 rounded-xl shadow mb-8">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-primary mb-2">25</div>
+                        <p class="text-slate-600 dark:text-slate-400">Total Pages</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-primary mb-2">8</div>
+                        <p class="text-slate-600 dark:text-slate-400">Sections</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-primary mb-2">100%</div>
+                        <p class="text-slate-600 dark:text-slate-400">Connected</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-primary mb-2">✅</div>
+                        <p class="text-slate-600 dark:text-slate-400">Ready to Use</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center border-t border-slate-200 dark:border-slate-700 pt-8">
+                <p class="text-slate-600 dark:text-slate-400 mb-4">VyaaparSaathi v1.0.0 - Your Business Companion</p>
+                <p class="text-sm text-slate-500 dark:text-slate-500">All pages are now interconnected and accessible from the Navigation Hub</p>
+                <p class="text-xs text-slate-400 dark:text-slate-600 mt-4">Made for India 🇮🇳</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

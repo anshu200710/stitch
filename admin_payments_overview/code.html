@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Payments Overview - VyaaparSaathi</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for iOS-like feel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 antialiased selection:bg-primary/30">
+<!-- Mobile Container -->
+<div class="max-w-md mx-auto min-h-screen bg-background-light dark:bg-background-dark relative overflow-hidden shadow-2xl flex flex-col">
+<!-- Header -->
+<header class="pt-12 pb-4 px-6 flex justify-between items-center bg-background-light dark:bg-background-dark z-10 sticky top-0">
+<button class="p-2 -ml-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons text-slate-800 dark:text-white">menu</span>
+</button>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">Payments Overview</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary p-0.5">
+<img alt="Admin User Profile Picture" class="w-full h-full object-cover rounded-full" data-alt="Professional man in suit portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCExPtb1v19dPOQLFHvoBeND2_gIveXIDWwsgdKgOW7iuI4BlCcelx6EJJqj9ahdHVI8KHhSCvbuGGRNCSUfM1ga4JXZxKgcnDlgxEQTGd5eEWFNMON1YpNLUer8EIVmMryERakVpykWrtdWhluIY0kFwKItWsAJInR3Vgry-QlAABlSuvz-OrwCCg39nyhfC74kpzDdoKc9sfZPJcwccb7J7J1HbUAgmOihn0UslCKRoZ1XEL-UIqnDK3M6_dwpaxDvZB7y1_Oj0"/>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto no-scrollbar px-6 pb-24">
+<!-- Summary Cards Section -->
+<section class="grid grid-cols-2 gap-4 mb-6">
+<!-- Total Revenue Card -->
+<div class="bg-gradient-to-br from-primary to-[#0daabb] rounded-xl p-5 text-white shadow-lg shadow-primary/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3 opacity-20">
+<span class="material-icons text-5xl">account_balance_wallet</span>
+</div>
+<p class="text-xs font-medium text-white/80 mb-1">Total Revenue</p>
+<h2 class="text-2xl font-bold mb-2">₹12.45L</h2>
+<div class="flex items-center text-xs font-medium bg-white/20 w-fit px-2 py-0.5 rounded-lg backdrop-blur-sm">
+<span class="material-icons text-[14px] mr-1">trending_up</span>
+                        +12%
+                    </div>
+</div>
+<!-- Pending Payments Card -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-100 dark:border-slate-700 shadow-sm relative">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">Pending</p>
+<h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-2">₹45k</h2>
+<div class="flex items-center text-xs font-medium text-orange-500 bg-orange-50 dark:bg-orange-900/20 w-fit px-2 py-0.5 rounded-lg">
+<span class="material-icons text-[14px] mr-1">warning</span>
+                        12 Invoices
+                    </div>
+</div>
+</section>
+<!-- Search & Filter -->
+<section class="mb-6 sticky top-0 z-20">
+<div class="relative flex items-center w-full">
+<span class="absolute left-4 text-slate-400 material-icons">search</span>
+<input class="w-full py-3.5 pl-12 pr-12 rounded-xl border-none bg-white dark:bg-slate-800 shadow-sm text-sm focus:ring-2 focus:ring-primary placeholder-slate-400 dark:text-white transition-shadow" placeholder="Search by name, ID or service..." type="text"/>
+<button class="absolute right-3 p-1.5 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 hover:text-primary transition-colors">
+<span class="material-icons text-xl">tune</span>
+</button>
+</div>
+</section>
+<!-- Recent Transactions List -->
+<section>
+<div class="flex justify-between items-end mb-4">
+<h3 class="text-lg font-bold text-slate-800 dark:text-white">Recent Transactions</h3>
+<button class="text-xs font-semibold text-primary hover:text-primary/80">View All</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Item 1: Paid -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between active:scale-[0.98] transition-transform duration-100">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="w-12 h-12 rounded-full bg-blue-50 dark:bg-slate-700 flex items-center justify-center text-blue-600 dark:text-blue-300 font-bold text-lg overflow-hidden">
+<img alt="Rahul Verma Profile" class="w-full h-full object-cover" data-alt="Portrait of young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-ekLNo1E4mepdkNdqFU-kWlCY3QMah4097hb1c9spWXoKrwHwzFQLYHCSszWIobMLMWSeGXPBG-c-scip6fU1fWevuNW3QyJEaGtkM9T60KpS4-b-zCzKfo_5Kf47g-k2YiYitqVT1OcoxQBH0zUSwGDVmT9FR8oA6Zdpv1o_ThwQRrDTGVohSviv4lCDNDa9JskfWmThJfYb2sBQZJ10hkELXUKVHlqEMkdoOgffh6qgpBHILQRdz-OpDKvAGunQpKe6QHPRitg"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-slate-800 rounded-full p-0.5">
+<span class="material-icons text-green-500 text-sm bg-green-100 dark:bg-green-900 rounded-full p-0.5">check</span>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white text-sm">Rahul Verma</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">GST Registration</p>
+<p class="text-[10px] text-slate-400 mt-0.5">Today, 10:23 AM</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-900 dark:text-white text-sm">₹1,500</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase tracking-wide rounded-md">Paid</span>
+</div>
+</div>
+<!-- Item 2: Pending -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between active:scale-[0.98] transition-transform duration-100">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-300 font-bold text-lg">
+                                SG
+                            </div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white text-sm">Sneha Gupta</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Trademark Filing</p>
+<p class="text-[10px] text-slate-400 mt-0.5">Yesterday, 4:15 PM</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-900 dark:text-white text-sm">₹4,500</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-[10px] font-bold uppercase tracking-wide rounded-md">Pending</span>
+</div>
+</div>
+<!-- Item 3: Refunded -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between active:scale-[0.98] transition-transform duration-100">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center overflow-hidden">
+<img alt="Amit Tech Logo" class="w-full h-full object-cover opacity-80" data-alt="Abstract tech company logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmbaPG9tDi1631ESnzR1EA5x9cyWDhxjdteUdIjPRf9bz7p7T7Ko1nQ5lUsQiSPH7A2334bsNMz_hbWZ1Vl7rPYJjz-1UTInjYefqCw3fAfIHziJgcQFdMNNcBHQt-fLbF8hJ1u04U4nU4UDWZ7Ge0uqyvCmfltJkgqncTgIFT-NaeYVNnrF6wI1D0E4GB9WTzFbyR8KXLdva6Ii5Mp81PIXDzobMQGFN9dhhcc8abpHIwjOBO-17aWGfX7Z3Ou7c92vdxMiiO7dk"/>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white text-sm">Amit Tech Pvt Ltd</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Annual Compliance</p>
+<p class="text-[10px] text-slate-400 mt-0.5">Aug 24, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-400 dark:text-slate-500 text-sm line-through">₹12,000</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wide rounded-md">Refunded</span>
+</div>
+</div>
+<!-- Item 4: Paid -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between active:scale-[0.98] transition-transform duration-100">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="w-12 h-12 rounded-full bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center text-teal-600 dark:text-teal-300 font-bold text-lg overflow-hidden">
+<img alt="Priya Singh Profile" class="w-full h-full object-cover" data-alt="Portrait of young woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoKza91onDQ7LWGqU-ZVIme8J2WHeIZZDGVGFTzs85pt2X2vcZM-Ontt6YI4XE6sIt_DtPG36RjeJS2wZ3shzPriWV1wb62Zxr-zU9vRnXx-6UqgBWRmdMBI1Ol8ugbLw9wZbCdGUOH2qkNmEKTrP12wR2mnr52PPxfFsvFSJ8b9Xghz8f4B7mvm4KpbUsy5Iry8Yv2qe6KG0bOu7w5dUzt5Ze4EkNFKCCs5pX4mO5GStTjrkzqYKWwhwp3cXyKAj8JtmLxMpjA7w"/>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white text-sm">Priya Singh</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Digital Signature</p>
+<p class="text-[10px] text-slate-400 mt-0.5">Aug 23, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-900 dark:text-white text-sm">₹800</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase tracking-wide rounded-md">Paid</span>
+</div>
+</div>
+<!-- Item 5: Pending -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between active:scale-[0.98] transition-transform duration-100">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-rose-50 dark:bg-rose-900/20 flex items-center justify-center text-rose-600 dark:text-rose-300 font-bold text-lg">
+                                RK
+                            </div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white text-sm">Rajesh Kumar</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Udyam Registration</p>
+<p class="text-[10px] text-slate-400 mt-0.5">Aug 22, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-900 dark:text-white text-sm">₹2,000</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-[10px] font-bold uppercase tracking-wide rounded-md">Pending</span>
+</div>
+</div>
+<!-- Item 6: Paid -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between active:scale-[0.98] transition-transform duration-100">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="w-12 h-12 rounded-full bg-cyan-50 dark:bg-cyan-900/20 flex items-center justify-center text-cyan-600 dark:text-cyan-300 font-bold text-lg overflow-hidden">
+                                   VB
+                                </div>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white text-sm">Vikram Bisht</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Legal Consultation</p>
+<p class="text-[10px] text-slate-400 mt-0.5">Aug 21, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-900 dark:text-white text-sm">₹3,000</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] font-bold uppercase tracking-wide rounded-md">Paid</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (Optional but adds to the phone feel) -->
+<nav class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-10 sticky bottom-0">
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 group">
+<span class="material-icons text-2xl mb-1 group-hover:text-primary transition-colors">dashboard</span>
+<span class="text-[10px] font-medium group-hover:text-primary transition-colors">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary group">
+<span class="material-icons text-2xl mb-1">payments</span>
+<span class="text-[10px] font-medium">Payments</span>
+</button>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center -mt-8 shadow-lg shadow-primary/40 border-4 border-white dark:border-slate-800 active:scale-95 transition-transform">
+<span class="material-icons text-white">add</span>
+</div>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 group">
+<span class="material-icons text-2xl mb-1 group-hover:text-primary transition-colors">people</span>
+<span class="text-[10px] font-medium group-hover:text-primary transition-colors">Users</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 group">
+<span class="material-icons text-2xl mb-1 group-hover:text-primary transition-colors">settings</span>
+<span class="text-[10px] font-medium group-hover:text-primary transition-colors">Settings</span>
+</button>
+</nav>
+</div>
+</body></html>

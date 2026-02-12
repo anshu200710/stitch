@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VyaaparSaathi - Add Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better mobile feel if needed, though native is usually fine */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex justify-center">
+<!-- Mobile Container -->
+<div class="w-full max-w-md bg-white dark:bg-background-dark shadow-xl min-h-screen flex flex-col relative">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 h-14 flex items-center justify-between">
+<button class="p-2 -ml-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-icons text-2xl">chevron_left</span>
+</button>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">Add New Service</h1>
+<button class="p-2 -mr-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons text-xl">more_horiz</span>
+</button>
+</header>
+<!-- Scrollable Form Content -->
+<main class="flex-1 overflow-y-auto px-5 py-6 space-y-8 pb-32">
+<!-- Section: Service Details -->
+<section class="space-y-5">
+<div class="flex items-center space-x-2 mb-2">
+<span class="material-icons text-primary text-xl">category</span>
+<h2 class="text-base font-bold text-slate-900 dark:text-white">Service Details</h2>
+</div>
+<!-- Service Name -->
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="serviceName">Service Name <span class="text-red-500">*</span></label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-primary/20 transition-shadow py-3 px-4" id="serviceName" placeholder="e.g., GST Registration" type="text"/>
+</div>
+<!-- Pricing -->
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="price">Base Price (₹) <span class="text-red-500">*</span></label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">₹</span>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-primary/20 transition-shadow py-3 pl-8 pr-4" id="price" placeholder="0.00" type="number"/>
+</div>
+</div>
+<!-- Category Dropdown -->
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="category">Category</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white focus:border-primary focus:ring-primary/20 transition-shadow py-3 px-4 pr-10" id="category">
+<option>Registration Services</option>
+<option>Tax Filing</option>
+<option>Compliance</option>
+<option>Legal Drafting</option>
+</select>
+<span class="material-icons absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Section: Descriptions -->
+<section class="space-y-5">
+<div class="flex items-center space-x-2 mb-2">
+<span class="material-icons text-primary text-xl">description</span>
+<h2 class="text-base font-bold text-slate-900 dark:text-white">Descriptions</h2>
+</div>
+<!-- Short Description -->
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="shortDesc">Short Summary</label>
+<textarea class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-primary/20 transition-shadow py-3 px-4 resize-none" id="shortDesc" placeholder="Brief overview shown in list view..." rows="2"></textarea>
+<p class="text-xs text-slate-400 text-right">0/120 characters</p>
+</div>
+<!-- Detailed Description -->
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="detailDesc">Detailed Scope</label>
+<textarea class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-primary/20 transition-shadow py-3 px-4" id="detailDesc" placeholder="Full details of what is included in this service..." rows="6"></textarea>
+</div>
+</section>
+<!-- Section: Documents Checklist -->
+<section class="space-y-4">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center space-x-2">
+<span class="material-icons text-primary text-xl">folder_shared</span>
+<h2 class="text-base font-bold text-slate-900 dark:text-white">Required Documents</h2>
+</div>
+<button class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-md hover:bg-primary/20 transition-colors">
+                        + Add Custom
+                    </button>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden divide-y divide-slate-200 dark:divide-slate-700">
+<!-- Checklist Item 1 -->
+<label class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-icons text-lg">badge</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">PAN Card</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Identity Proof</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 text-primary rounded border-slate-300 dark:border-slate-600 focus:ring-primary/50" type="checkbox"/>
+</label>
+<!-- Checklist Item 2 -->
+<label class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+<span class="material-icons text-lg">fingerprint</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Aadhar Card</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Address Proof</p>
+</div>
+</div>
+<input class="w-5 h-5 text-primary rounded border-slate-300 dark:border-slate-600 focus:ring-primary/50" type="checkbox"/>
+</label>
+<!-- Checklist Item 3 -->
+<label class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+<span class="material-icons text-lg">article</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">GST Certificate</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Business Proof</p>
+</div>
+</div>
+<input class="w-5 h-5 text-primary rounded border-slate-300 dark:border-slate-600 focus:ring-primary/50" type="checkbox"/>
+</label>
+<!-- Checklist Item 4 -->
+<label class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
+<span class="material-icons text-lg">account_balance</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Bank Statement</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Last 6 Months</p>
+</div>
+</div>
+<input class="w-5 h-5 text-primary rounded border-slate-300 dark:border-slate-600 focus:ring-primary/50" type="checkbox"/>
+</label>
+</div>
+</section>
+<!-- Section: Additional Options -->
+<section class="space-y-4 pt-2">
+<h2 class="text-base font-bold text-slate-900 dark:text-white pl-1">Visibility</h2>
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-slate-200 dark:border-slate-700">
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Active Service</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Visible to all customers</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer checked:right-0 checked:border-primary" id="toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-slate-300 cursor-pointer peer-checked:bg-primary" for="toggle"></label>
+<!-- Simple CSS toggle simulation using tailwind classes on parent/peer not perfectly clean without custom css, using a styled checkbox look instead below -->
+</div>
+<!-- Better Toggle Implementation with standard checkbox styling -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/30 dark:peer-focus:ring-primary/50 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Action -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-white/90 dark:bg-background-dark/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-40">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-icons text-xl">save</span>
+                Save Service
+            </button>
+</div>
+</div>
+</body></html>

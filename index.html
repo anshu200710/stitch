@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VyaaparSaathi - Navigation Hub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 p-4">
+        <div class="max-w-4xl mx-auto py-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl mb-4 shadow-lg">
+                    <span class="material-icons text-white text-4xl">candlestick_chart</span>
+                </div>
+                <h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                    Vyaapar<span class="text-primary">Saathi</span>
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400">Your Business Companion - Navigation Hub</p>
+            </div>
+
+            <!-- Navigation Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                
+                <!-- Authentication Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">lock</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Authentication</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="splash_screen/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">1. Splash Screen</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">App loading screen</div>
+                        </a>
+                        <a href="login_screen/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">2. Login Screen</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">User authentication</div>
+                        </a>
+                        <a href="signup_screen/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">3. Sign Up Screen</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">New user registration</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- User Dashboard Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">dashboard</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">User Dashboard</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="user_dashboard/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Dashboard Home</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Main user interface</div>
+                        </a>
+                        <a href="user_profile_screen/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">User Profile</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Profile management</div>
+                        </a>
+                        <a href="user_notifications/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Notifications</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">User messages & alerts</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">design_services</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Services</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="services_list/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Services List</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Available services</div>
+                        </a>
+                        <a href="admin_services_list/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Admin Services</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Manage services (Admin)</div>
+                        </a>
+                        <a href="offers_&_freebies/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Offers & Freebies</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Special offers & deals</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Requests & Orders Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">assignment</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Requests & Orders</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="request_details/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Request Details</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">View request information</div>
+                        </a>
+                        <a href="request_submitted_success/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Request Success</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Confirmation screen</div>
+                        </a>
+                        <a href="admin_requests_list/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Admin Requests</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">All requests (Admin)</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Payments Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">payment</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Payments</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="payment_history/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Payment History</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Transaction records</div>
+                        </a>
+                        <a href="admin_payments_overview/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Admin Payments</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Payment overview (Admin)</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tools & Utilities Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">build</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Tools & Utilities</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="calculator_home/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Calculator Home</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Calculator interface</div>
+                        </a>
+                        <a href="gst_calculator_input/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">GST Calculator Input</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">GST calculation tool</div>
+                        </a>
+                        <a href="calculator_result/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Calculator Result</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Calculation results</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Documents & Admin Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">folder</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Documents & Admin</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="my_documents_list/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">My Documents</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Document management</div>
+                        </a>
+                        <a href="upload_document_screen/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Upload Documents</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Document upload</div>
+                        </a>
+                        <a href="admin_dashboard/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Admin Dashboard</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Admin control panel</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Admin Management Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">admin_panel_settings</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Admin Management</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="admin_users_list/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Users List</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Manage users</div>
+                        </a>
+                        <a href="admin_create_offer/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Create Offer</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Create new offers</div>
+                        </a>
+                        <a href="admin_send_notification/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Send Notification</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Send alerts to users</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Additional Pages Section -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-primary text-2xl">more_horiz</span>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Additional Pages</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="add/edit_service_form/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Edit Service Form</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Service editing form</div>
+                        </a>
+                        <a href="admin_request_detail_view/code.html" class="block p-3 rounded-lg bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 transition">
+                            <div class="font-semibold text-slate-900 dark:text-white">Request Detail View</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Detailed request info</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Flow Diagram -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span class="material-icons text-primary">flow_chart</span>
+                    Application Flow
+                </h2>
+                <div class="space-y-4 text-sm">
+                    <div class="p-4 bg-blue-50 dark:bg-slate-700 rounded-lg">
+                        <div class="font-bold text-slate-900 dark:text-white mb-2">🎯 User Journey</div>
+                        <p class="text-slate-700 dark:text-slate-300">Splash Screen → Login/Sign Up → User Dashboard → Services/Requests → Payments</p>
+                    </div>
+                    <div class="p-4 bg-indigo-50 dark:bg-slate-700 rounded-lg">
+                        <div class="font-bold text-slate-900 dark:text-white mb-2">🔐 Admin Journey</div>
+                        <p class="text-slate-700 dark:text-slate-300">Admin Dashboard → Manage Users/Services/Offers → Send Notifications → View Payments</p>
+                    </div>
+                    <div class="p-4 bg-green-50 dark:bg-slate-700 rounded-lg">
+                        <div class="font-bold text-slate-900 dark:text-white mb-2">🧮 Calculator Feature</div>
+                        <p class="text-slate-700 dark:text-slate-300">Calculator Home → GST Calculator Input → Calculator Result</p>
+                    </div>
+                    <div class="p-4 bg-purple-50 dark:bg-slate-700 rounded-lg">
+                        <div class="font-bold text-slate-900 dark:text-white mb-2">📄 Document Management</div>
+                        <p class="text-slate-700 dark:text-slate-300">My Documents → Upload Document Screen → Document Management</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center text-slate-600 dark:text-slate-400">
+                <p class="font-semibold mb-2">VyaaparSaathi v1.0.0</p>
+                <p class="text-sm">Click any page link above to navigate and explore the application</p>
+                <p class="text-xs mt-2">Made for India 🇮🇳</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

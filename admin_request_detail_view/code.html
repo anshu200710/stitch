@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Request Detail View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* iOS specific scrollbar hiding for cleaner look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 antialiased min-h-screen flex justify-center">
+<!-- Mobile Container -->
+<div class="w-full max-w-md bg-white dark:bg-gray-900 min-h-screen relative shadow-2xl flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-4 pt-12 pb-4 flex items-center justify-between">
+<button class="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-primary">
+<span class="material-icons">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Request #12345</h1>
+<button class="p-2 -mr-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-primary">
+<span class="material-icons">more_horiz</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-32 p-4 space-y-6">
+<!-- User Profile Snippet -->
+<section class="bg-primary/5 dark:bg-primary/10 rounded-xl p-4 flex items-center justify-between shadow-sm border border-primary/10">
+<div class="flex items-center space-x-3">
+<img alt="User Avatar" class="w-12 h-12 rounded-full object-cover border-2 border-white dark:border-gray-800 shadow-sm" data-alt="Portrait of Rahul Verma" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq_fjFWHMlA2rFrmBYl4ntp7c5w-mr3q4VjY437KGx4RaxmPGkGkgrbRr55gjgA73hL4C6sI8ezV7G-u07WJvP-ztGjZWuONgDmlUMiB3b80IopqZm1hjX3V4AEe-kHBhV31Yj3GbHxc2a2puaU3Uy92ZZ8WuWkqnZEITnAivZ2nwUeLefEcwKc_QbZzEjoVW1NBijPelhQ8zsDmIf0o7rFgV23EEl7rpxXyM5-zrMjjl2fgxkoFAedWfMm1kc86UeaiEktlilmlA"/>
+<div>
+<h2 class="text-base font-bold text-gray-900 dark:text-white leading-tight">Rahul Verma</h2>
+<p class="text-xs text-primary font-medium mt-0.5">Verma Traders</p>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons text-xl">call</span>
+</button>
+</section>
+<!-- Service Details -->
+<section class="space-y-3">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white flex items-center">
+<span class="w-1 h-5 bg-primary rounded-full mr-2"></span>
+                    Service Details
+                </h3>
+<div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-5 border border-gray-100 dark:border-gray-700/50 space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium mb-1 uppercase tracking-wider">Service Type</p>
+<p class="text-sm font-semibold text-gray-900 dark:text-white">GST Registration</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium mb-1 uppercase tracking-wider">Date Requested</p>
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Oct 24, 2023</p>
+</div>
+</div>
+<div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium mb-1 uppercase tracking-wider">Description</p>
+<p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Need assistance registering a new proprietorship in Maharashtra. We are looking to start operations by next month.
+                        </p>
+</div>
+</div>
+</section>
+<!-- Documents -->
+<section class="space-y-3">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white flex items-center">
+<span class="w-1 h-5 bg-primary rounded-full mr-2"></span>
+                    Documents
+                </h3>
+<div class="space-y-2">
+<!-- Document Item 1 -->
+<div class="bg-white dark:bg-gray-800 rounded-lg p-3 flex items-center justify-between border border-gray-200 dark:border-gray-700 shadow-sm">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-red-50 dark:bg-red-900/20 flex items-center justify-center text-red-500">
+<span class="material-icons text-xl">picture_as_pdf</span>
+</div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">PAN Card.pdf</p>
+<p class="text-xs text-gray-400">2.4 MB</p>
+</div>
+</div>
+<button class="p-2 text-primary hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-icons">visibility</span>
+</button>
+</div>
+<!-- Document Item 2 -->
+<div class="bg-white dark:bg-gray-800 rounded-lg p-3 flex items-center justify-between border border-gray-200 dark:border-gray-700 shadow-sm">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-500">
+<span class="material-icons text-xl">image</span>
+</div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Address Proof.jpg</p>
+<p class="text-xs text-gray-400">1.8 MB</p>
+</div>
+</div>
+<button class="p-2 text-primary hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-icons">visibility</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Admin Actions Form -->
+<section class="space-y-4 pt-2">
+<!-- Status Dropdown -->
+<div>
+<label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Update Status</label>
+<div class="relative">
+<select class="appearance-none w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl py-3 px-4 pr-8 leading-tight focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow font-medium">
+<option value="pending">Pending Review</option>
+<option selected="" value="in-progress">In-Progress</option>
+<option value="needs-info">Needs More Info</option>
+<option value="completed">Completed</option>
+<option value="rejected">Rejected</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-primary">
+<span class="material-icons">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Admin Notes -->
+<div>
+<label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Admin Notes</label>
+<textarea class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl py-3 px-4 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow resize-none text-sm" placeholder="Add notes for the user regarding this request..." rows="4"></textarea>
+</div>
+</section>
+</main>
+<!-- Sticky Action Bar -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-gray-200 dark:border-gray-800">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-primary/25 active:scale-[0.98] transition-all flex items-center justify-center space-x-2">
+<span class="material-icons text-sm">save</span>
+<span>Update Request</span>
+</button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Send Notification - VyaaparSaathi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+<div class="max-w-md mx-auto min-h-screen relative flex flex-col bg-white dark:bg-slate-900 shadow-2xl overflow-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-20 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3 flex items-center justify-between">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+<span class="material-icons">menu</span>
+</button>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">Send Notification</h1>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300 relative">
+<span class="material-icons">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto px-5 py-6 space-y-8 pb-32">
+<!-- Section 1: Audience Selection -->
+<section class="space-y-3">
+<label class="block text-sm font-bold text-slate-700 dark:text-slate-200 uppercase tracking-wider">Target Audience</label>
+<!-- Custom Segmented Control -->
+<div class="bg-slate-100 dark:bg-slate-800 p-1 rounded-lg flex space-x-1">
+<button class="flex-1 bg-white dark:bg-slate-700 shadow-sm text-primary dark:text-primary font-semibold py-2 px-3 rounded text-sm transition-all text-center">
+                        All Users
+                    </button>
+<button class="flex-1 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-medium py-2 px-3 rounded text-sm transition-all text-center">
+                        Pending
+                    </button>
+<button class="flex-1 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-medium py-2 px-3 rounded text-sm transition-all text-center">
+                        Specific
+                    </button>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-icons text-primary text-sm">info</span>
+<p class="text-xs text-slate-500 dark:text-slate-400">Estimated reach: <span class="font-semibold text-slate-800 dark:text-slate-200">12,450 users</span></p>
+</div>
+</section>
+<!-- Section 2: Content Composition -->
+<section class="space-y-5">
+<div class="space-y-1">
+<label class="block text-sm font-bold text-slate-700 dark:text-slate-200" for="title">Notification Title</label>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder-slate-400 dark:text-white" id="title" placeholder="e.g., Special Offer for Diwali" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-sm font-bold text-slate-700 dark:text-slate-200" for="message">Message Body</label>
+<div class="relative">
+<textarea class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder-slate-400 resize-none dark:text-white" id="message" placeholder="Type your message here..." rows="4"></textarea>
+<div class="absolute bottom-2 right-2 text-xs text-slate-400">0/140</div>
+</div>
+</div>
+<!-- Preview Card -->
+<div class="mt-4 p-4 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
+<p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-2 uppercase">Preview</p>
+<div class="bg-white/80 dark:bg-slate-700/80 backdrop-blur-sm rounded-lg p-3 shadow-sm flex gap-3 items-start">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white shrink-0">
+<span class="material-icons text-xl">storefront</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-0.5">
+<span class="font-bold text-sm text-slate-900 dark:text-white truncate pr-2">VyaaparSaathi</span>
+<span class="text-[10px] text-slate-400">now</span>
+</div>
+<p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Special Offer for Diwali</p>
+<p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 mt-0.5">Don't miss out on our biggest festive sale! Check your dashboard for exclusive deals.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Delivery Settings -->
+<section class="space-y-4 pt-2">
+<label class="block text-sm font-bold text-slate-700 dark:text-slate-200 uppercase tracking-wider">Delivery Options</label>
+<div class="space-y-3">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons text-sm">phonelink_ring</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-slate-900 dark:text-white">Push Notification</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Send directly to device lockscreen</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+<span class="material-icons text-sm">inbox</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-slate-900 dark:text-white">In-App Message</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Show in notification center</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Footer -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-10">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-lg shadow-lg shadow-blue-500/30 transition-transform active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-icons text-lg">send</span>
+                Send Notification
+            </button>
+</div>
+</div>
+</body></html>
